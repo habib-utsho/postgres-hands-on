@@ -25,7 +25,7 @@ SELECT * FROM post;
 
 
 -- Deletion constraint on DELETE user
- 1. Cascading Deletion -> ON DELETE CASCADE
- 2. Setting NULL -> ON DELETE SET NULL
- 3. Restrict Deletion -> ON DELETE RESTRICT / ON DELETE NO ACTION (default) 
- 4. Set default value -> ON DELETE SET DEFAULT VALUE
+--  1. Cascading Deletion -> ON DELETE CASCADE
+--  2. Setting NULL -> ON DELETE SET NULL
+--  3. Restrict Deletion -> ON DELETE RESTRICT / ON DELETE NO ACTION (default) 
+--  4. Set default value -> ON DELETE SET DEFAULT VALUE
