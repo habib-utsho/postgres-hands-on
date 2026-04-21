@@ -21,7 +21,9 @@
 
 
 SELECT title, username,user_id, u.id as user_id_remote, post.id as post_id FROM post  
-   JOIN "user" as u on post.user_id = u.id;   
+   JOIN "user" as u 
+   on post.user_id = u.id;   
+   
 SELECT * FROM "user";
 
 
