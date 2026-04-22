@@ -103,14 +103,13 @@ SELECT customer_id from "order" GROUP BY customer_id
 
 -- Total order per customer
 SELECT
-    customer_name,
+    customer_id,
     count(*) AS total_order,
     sum(price) AS total_purchase_amount
 from "order"
     JOIN product on "order".product_id = product.id
-    JOIN customer on "order".customer_id = customer.id
 GROUP BY
-    customer_name
+    customer_id
 ORDER BY total_purchase_amount DESC
 
 -- Find most expensive product ever ordered
@@ -121,5 +120,11 @@ GROUP BY
     product_name
 ORDER BY max_price DESC
 LIMIT 1
+
+-- Find customers who never ordered
+SELECT * from customer 
+ LEFT JOIN "order" ON customer.id = "order".customer_id
+ WHERE "order".id IS NULL
+
 
 SELECT * from "order"
